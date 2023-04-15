@@ -1,0 +1,259 @@
+/* -----------------------------   Zmienne z kolorami */
+:root {
+	--mainBgCr: #212121;
+	--mainTextCr: #cfcfcf;
+	--headersCr: #5b7200;
+	--bordersCr: #ab9400d0;
+	--shadow: 1px 1px 2px black, 0 0 1em gold, 0 0 0.2em gold;
+}
+/* -----------------------------   Resetowanie domyślnych styli */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* -----------------------------   Globalne style */
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: var(--mainTextCr);
+	background-color: var(--mainBgCr);
+}
+.container {
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 20px;
+	box-sizing: border-box;
+}
+button {
+	max-width: 80%;
+	padding: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: var(--mainTextCr);
+	background-color: var(--headersCr);
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+}
+
+/* -----------------------------   Stylowanie nawigacji */
+.menu {
+	width: clamp(600px, 100%, 100%);
+	display: flex;
+	position: fixed;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: clamp(14px, 1.5vw, 20px);
+	background-color: var(--bordersCr);
+	flex-wrap: nowrap;
+	padding: 20px;
+}
+.menu ul {
+	width: clamp(600px, 100%, 1200px);
+	display: flex;
+	list-style: none;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.menu li {
+	margin: 20px;
+}
+
+/* -----------------------------   Stylizowanie linkow */
+.menu a:link,
+.menu a:active,
+.menu a:visited {
+	text-decoration: none;
+	box-shadow: none;
+	color: var(--mainTextCr);
+	padding: 10px;
+	text-transform: uppercase;
+}
+.hangman a:link,
+.hangman a:active,
+.hangman a:visited {
+	text-decoration: none;
+	box-shadow: none;
+	color: var(--mainTextCr);
+}
+.menu a:hover {
+	text-shadow: var(--shadow);
+}
+.btn:hover,
+button:hover {
+	box-shadow: var(--shadow);
+}
+.content {
+	padding: 1px 0;
+}
+h1 {
+	font-size: clamp(18px, 3vw, 40px);
+	color: var(--headersCr);
+	margin-bottom: 10%;
+}
+.site {
+	text-align: center;
+	margin: 12vw auto;
+	max-width: 1000px;
+}
+.hangGrid {
+	min-height: 500px;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	justify-items: center;
+	align-content: center;
+	grid-template-rows: 1fr 50% 20%;
+	grid-template-columns: repeat(2, 1fr);
+	border-radius: 20px;
+	box-shadow: inset 1px 1px 3px grey;
+	margin: 15px;
+	padding: 15px;
+}
+.password {
+	grid-row: 1/2;
+	grid-column: 1/3;
+	font-size: 24px;
+	margin: 20px auto 25px;
+	letter-spacing: 0.1rem;
+}
+img {
+	grid-row: 2/3;
+	grid-column: 1/2;
+  width: clamp(80%, 85%, 95%);
+  border: 2px solid var(--bordersCr);
+}
+.alphabet {
+	grid-row: 2/3;
+	grid-column: 2/3;
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	justify-items: center;
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(9, 1fr);
+	max-width: 90%;
+	padding: 5px 0;
+}
+
+.letter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height: 30px;
+	margin: 5px;
+	border: 3px solid var(--bordersCr);
+	border-radius: 15px;
+	cursor: pointer;
+}
+.letter:hover {
+	background-color: var(--headersCr);
+}
+.guessed {
+	color: lime;
+	border: 1px solid lime;
+	cursor: default;
+}
+.notguessed {
+	color: red;
+	border: 1px solid red;
+	cursor: default;
+}
+.result {
+	grid-row: 2/3;
+	grid-column: 2/3;
+}
+.won {
+	color: lime;
+	border: 1px solid lime;
+	cursor: default;
+	padding: 5px;
+	box-shadow: lime;
+}
+.loose {
+	color: red;
+	border: 1px solid red;
+	cursor: default;
+	padding: 5px;
+	box-shadow: red;
+}
+.reset {
+	grid-row: 3/4;
+	grid-column: 2/3;
+}
+.hide {
+	display: none;
+}
+@media (max-width: 768px) {
+	.menu {
+		width: clamp(200px, 100%, 768px);
+		display: flex;
+	}
+	.menu ul {
+		width: clamp(200px, 100%, 768px);
+		display: flex;
+		list-style: none;
+		flex-wrap: nowrap;
+		flex-direction: column;
+	}
+	.container {
+		max-width: 100%;
+	}
+	.site {
+		margin: 250px auto 10vw;
+	}
+	.hangGrid {
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		justify-items: center;
+		align-content: center;
+		grid-template-rows: repeat(5, auto);
+		grid-template-columns: 1fr;
+		border-radius: 20px;
+		box-shadow: inset 1px 1px 3px grey;
+		margin: 15px;
+		padding: 15px;
+	}
+	.password {
+		grid-row: 1/2;
+		grid-column: 1/2;
+	}
+	img {
+		grid-row: 2/3;
+		grid-column: 1/2;
+	}
+	.alphabet {
+		grid-row: 3/4;
+		grid-column: 1/2;
+		display: grid;
+		align-content: center;
+		justify-content: center;
+		align-items: center;
+		justify-items: center;
+		grid-template-rows: auto;
+		grid-template-columns: repeat(7, 1fr);
+		max-width: 90%;
+	}
+
+	.result {
+		grid-row: 4/5;
+		grid-column: 1/2;
+		margin: 5px;
+	}
+	.reset {
+		grid-row: 5/6;
+		grid-column: 1/2;
+		margin: 5px;
+	}
+	.hide {
+		display: none;
+	}
+}
