@@ -20,12 +20,6 @@ body {
 	color: var(--mainTextCr);
 	background-color: var(--mainBgCr);
 }
-.container {
-	max-width: 100%;
-	margin: 0 auto;
-	padding: 20px;
-	box-sizing: border-box;
-}
 button {
 	padding: 10px;
 	font-weight: bold;
