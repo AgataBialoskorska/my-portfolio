@@ -81,9 +81,17 @@ button {
 	box-shadow: none;
 	color: var(--mainTextCr);
 }
+.contactBtns a:link,
+.contactBtns a:active,
+.contactBtns a:visited {
+	text-decoration: none;
+	color: var(--mainTextCr);
+
+}
 .menu a:hover {
 	text-shadow: var(--shadow);
 }
+
 .btn:hover,
 button:hover {
 	box-shadow: var(--shadow);
@@ -104,10 +112,13 @@ h1 {
 }
 .aboutGrid {
 	display: grid;
-	grid-template-rows: 1fr 5fr;
+	grid-template-rows: 1fr 5fr 1fr;
 	grid-template-columns: 1fr 1.8fr;
 	gap: 3%;
 	align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
 }
 .aboutGrid img {
 	grid-row: 1 / span 2;
@@ -124,7 +135,7 @@ h1 {
 	letter-spacing: 0.2rem;
 	font-size: clamp(12px, 2.2vw, 24px);
 }
-.aboutGrid p:last-child {
+.aboutGrid p:nth-child(3) {
 	grid-row: 2/3;
 	grid-column: 2/3;
 	display: flex;
@@ -134,7 +145,27 @@ h1 {
 	line-height: 1.8;
 	padding: 0 1%;
 }
-
+.contact {
+	grid-row: 3/4;
+	grid-column: 1/2;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+}
+.contactBtns{
+	display:flex;
+	flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+	margin: auto 10px;
+}
+.fa-envelope,
+.fa-linkedin {
+    width: 50px;
+    font-size: x-large; 
+    text-decoration: none;
+}
 /* -----------------------------  Stylowanie projects */
 .projects {
 	padding: 1px 0;
