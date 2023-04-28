@@ -27,7 +27,6 @@ body {
 	box-sizing: border-box;
 }
 button {
-	max-width: 80%;
 	padding: 10px;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -86,7 +85,6 @@ button {
 .contactBtns a:visited {
 	text-decoration: none;
 	color: var(--mainTextCr);
-
 }
 .menu a:hover {
 	text-shadow: var(--shadow);
@@ -116,9 +114,9 @@ h1 {
 	grid-template-columns: 1fr 1.8fr;
 	gap: 3%;
 	align-items: center;
-    justify-items: center;
-    align-content: center;
-    justify-content: center;
+	justify-items: center;
+	align-content: center;
+	justify-content: center;
 }
 .aboutGrid img {
 	grid-row: 1 / span 2;
@@ -133,7 +131,7 @@ h1 {
 	grid-row: 1/2;
 	grid-column: 2/3;
 	letter-spacing: 0.2rem;
-	font-size: clamp(12px, 2.2vw, 24px);
+	font-size: clamp(14px, 2.2vw, 24px);
 }
 .aboutGrid p:nth-child(3) {
 	grid-row: 2/3;
@@ -141,30 +139,24 @@ h1 {
 	display: flex;
 	text-align: center;
 	white-space: normal;
-	font-size: clamp(12px, 2vw, 22px);
+	font-size: clamp(14px, 2vw, 22px);
 	line-height: 1.8;
 	padding: 0 1%;
 }
 .contact {
 	grid-row: 3/4;
 	grid-column: 1/2;
-	display: flex;
-	justify-content: center;
-    align-items: center;
+	width: clamp(100px, 30vw, 300px);
 }
-.contactBtns{
-	display:flex;
-	flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-	margin: auto 10px;
+.contactBtns {
+	display: inline-block;
+	text-decoration: none;
+	margin: auto 5%;
 }
 .fa-envelope,
 .fa-linkedin {
-    width: 50px;
-    font-size: x-large; 
-    text-decoration: none;
+	font-size: clamp(14px, 2vw, 25px);
+	width: clamp(40px, 2vw, 100px);
 }
 /* -----------------------------  Stylowanie projects */
 .projects {
@@ -202,7 +194,7 @@ h1 {
 	grid-template-rows: 15% 20% 65%;
 	grid-template-columns: 0.8fr 1.2fr;
 	gap: 5px;
-	padding: 1vw;
+	padding: 2vw;
 }
 .weatherIcon {
 	grid-row: 2/3;
@@ -266,27 +258,59 @@ h1 {
 	grid-row: 3/4;
 	grid-column: 1/2;
 }
-
+/* 
+------------------------------------------  MEDIA 
+*/
 @media (max-width: 768px) {
 	.menu {
 		width: clamp(200px, 100%, 768px);
-		display: flex;
+		padding: 10px
 	}
 	.menu ul {
 		width: clamp(200px, 100%, 768px);
-		display: flex;
-		list-style: none;
-		flex-wrap: nowrap;
 		flex-direction: column;
+	}
+	.menu li {
+		margin: 20px;
 	}
 	.container {
 		max-width: 100%;
 	}
-	.aboutMe {
-		margin: auto 10px;
-		margin-top: 250px;
-	}
 	.site {
-		margin: 250px auto 10vw;
+		margin: 210px auto 10vw;
 	}
+	.aboutGrid {
+		display: grid;
+		grid-template-rows: 0.8fr 0.3fr 0.2fr 0.8fr;
+		grid-template-columns: 1fr;
+		gap: 3%;
+		align-items: center;
+		justify-items: center;
+		align-content: center;
+		justify-content: center;
+	}
+	.aboutGrid img {
+		grid-row: 1 / 2;
+		grid-column: 1/2;
+		padding: 2%;
+	}
+	
+	[data-id='pHi'] {
+		grid-row: 3/4;
+		grid-column: 1/2;
+	}
+	.aboutGrid p:nth-child(3) {
+		grid-row: 4/5;
+		grid-column: 1/2;
+		width: 90%;
+	}
+	.contact {
+		grid-row: 2/3;
+		grid-column: 1/2;
+		width: 90%;
+	}
+	.contactBtns {
+		margin: auto 2%;
+	}
+	
 }
