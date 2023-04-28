@@ -223,9 +223,13 @@ h1 {
 .weatherIcon {
 	max-width: 60%;
 }
+.wDesc {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 /* -----------------------------  Stylowanie disney API */
 .disneyApi {
-	grid-template-rows: 15% minmax(45%, 1fr) minmax(40%, 1fr);
+	grid-template-rows: 60px minmax(100px, 160px) minmax(100px, 180px);
 	grid-template-columns: 1fr;
 	gap: 5px;
 	padding: 2vw;
@@ -233,12 +237,13 @@ h1 {
 .image {
 	grid-row: 2/3;
 	grid-column: 1/2;
-	max-width: 95%;
-	max-height: 95%;
+	max-height: 100%;
+	object-fit: contain;
 }
 .disneyDes {
 	grid-row: 3/4;
 	grid-column: 1/2;
+	max-height: 100%;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
