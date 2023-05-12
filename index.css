@@ -1,6 +1,6 @@
 /* -----------------------------   Zmienne z kolorami */
 :root {
-	--mainBgCr: #212121;
+	--mainBgCr: #1a1a1a;
 	--mainTextCr: #cfcfcf;
 	--headersCr: #5b7200;
 	--bordersCr: #ab9400d0;
@@ -20,9 +20,14 @@ body {
 	color: var(--mainTextCr);
 	background-color: var(--mainBgCr);
 }
+h1 {
+	font-size: clamp(30px, 3vw, 40px);
+	color: var(--headersCr);
+	margin-bottom: clamp(3%, 5%, 7%);
+}
+.btn,
 button {
-	padding: 10px;
-	font-weight: bold;
+	padding: 8px;
 	text-transform: uppercase;
 	color: var(--mainTextCr);
 	background-color: var(--headersCr);
@@ -33,19 +38,18 @@ button {
 
 /* -----------------------------   Stylowanie nawigacji */
 .menu {
-	width: clamp(600px, 100%, 100%);
+	width: clamp(768px, 100%, 100%);
 	display: flex;
 	position: fixed;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	font-size: clamp(14px, 1.5vw, 20px);
+	font-size: clamp(14px, 2vw, 20px);
 	background-color: var(--bordersCr);
 	flex-wrap: nowrap;
-	padding: 20px;
 }
 .menu ul {
-	width: clamp(600px, 100%, 1200px);
+	width: clamp(768px, 100%, 100%);
 	display: flex;
 	list-style: none;
 	flex-wrap: nowrap;
@@ -54,12 +58,11 @@ button {
 	align-items: center;
 }
 .menu li {
-	margin: 10px;
-	padding: 10px;
+	padding: calc(20px + 1vw) 3vw;
 	text-transform: uppercase;
 }
 
-/* -----------------------------   Stylizowanie linkow */
+/* -----------------------------   Stylowanie linkow */
 a:link,
 a:active,
 a:visited {
@@ -76,16 +79,12 @@ button:hover {
 }
 .certs:hover {
 	box-shadow: var(--shadow);
+	cursor: pointer;
 }
 
 /* -----------------------------  Stylowanie aboutMe */
 .content {
-	padding: 1px 0;
-}
-h1 {
-	font-size: clamp(18px, 3vw, 40px);
-	color: var(--headersCr);
-	margin-bottom: clamp(6%, 8%, 10%);
+	padding: 1px;
 }
 .site {
 	text-align: center;
@@ -135,7 +134,7 @@ h1 {
 .contactBtns {
 	display: inline-block;
 	text-decoration: none;
-	margin: auto 5%;
+	margin: auto 2%;
 }
 .fa-envelope,
 .fa-linkedin,
@@ -159,15 +158,17 @@ h1 {
 .apis {
 	width: clamp(300px, 100vw, 30%);
 	height: clamp(350px, 90vh, 450px);
-	font-size: clamp(0.3rem, 1rem, 14px);
+	font-size: clamp(0.3rem, 1rem, 16px);
 	margin: 15px;
 	border-radius: 20px;
+	padding: 2%;
 	box-shadow: inset 1px 1px 3px grey;
 	display: grid;
 	align-content: center;
 	justify-content: center;
 	justify-items: center;
 	align-items: center;
+	gap: 5px;
 }
 .header {
 	grid-row: 1/2;
@@ -177,20 +178,21 @@ h1 {
 .hello {
 	grid-template-rows: 15% 1fr 30%;
 	grid-template-columns: 1fr;
-	gap: 5px;
-	padding: 2vw;
 }
-.langIcon {
+.helloIcon {
 	grid-row: 2/3;
 	grid-column: 1/2;
 	max-width: 70%;
+}
+.helloBtn {
+	grid-row: 3/4;
+	grid-column: 1/2;
+	min-width: 50%;
 }
 /* -----------------------------  Stylowanie WeatherAPI */
 .weatherApi {
 	grid-template-rows: 15% 20% 65%;
 	grid-template-columns: 0.8fr 1.2fr;
-	gap: 5px;
-	padding: 2vw;
 }
 .weatherIcon {
 	grid-row: 2/3;
@@ -227,12 +229,14 @@ h1 {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
+.cityName {
+	font-weight: bold;
+	font-size: larger;
+}
 /* -----------------------------  Stylowanie disney API */
 .disneyApi {
 	grid-template-rows: 60px minmax(100px, 160px) minmax(100px, 180px);
 	grid-template-columns: 1fr;
-	gap: 5px;
-	padding: 2vw;
 }
 .image {
 	grid-row: 2/3;
@@ -247,21 +251,32 @@ h1 {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-/* -----------------------------  Stylowanie Hangman */
-.hangman {
-	grid-template-rows: 15% 1fr 30%;
+/* -----------------------------  Stylowanie Hangman w podstronie projects */
+.hangmanProject {
+	grid-template-rows: 15% 1fr 15% 15%;
 	grid-template-columns: 1fr;
 	gap: 5px;
-	padding: 2vw;
+}
+.headerH {
+	grid-row: 1/2;
+	grid-column: 1/2;
 }
 .gameImg {
 	grid-row: 2/3;
 	grid-column: 1/2;
-	max-width: 95%;
+	width: 95%;
 }
 .gameBtn {
 	grid-row: 3/4;
 	grid-column: 1/2;
+	margin-bottom: -10px;
+	min-width: 50%;
+}
+.gameBtnGit {
+	grid-row: 4/5;
+	grid-column: 1/2;
+	margin-top: -10px;
+	min-width: 50%;
 }
 /* -----------------------------  Stylowanie Certificates */
 .certContent {
@@ -285,6 +300,30 @@ h1 {
 	height: 220px;
 	vertical-align: middle;
 }
+.popup {
+	width: clamp(40vw, 60vw, 70vw);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.popup img {
+	max-width: 100%;
+	border: solid 5px var(--bordersCr);
+	border-radius: 5px;
+	padding: 5px;
+}
+.closeBtn {
+	position: fixed;
+	right: 0;
+	transform: translate(40%, -40%);
+	border-radius: 50%;
+	transition: opacity 4s ease-in;
+}
+
+.fa-times-circle {
+	font-size: xx-large;
+}
 
 /* 
 ------------------------------------------  MEDIA 
@@ -292,11 +331,12 @@ h1 {
 @media (max-width: 768px) {
 	.menu {
 		width: clamp(200px, 100%, 768px);
-		padding: 1%;
 	}
 	.menu ul {
-		width: clamp(200px, 100%, 768px);
 		flex-direction: column;
+	}
+	.menu li {
+		padding: 20px 3vw;
 	}
 	.site {
 		margin: 210px auto 10vw;
