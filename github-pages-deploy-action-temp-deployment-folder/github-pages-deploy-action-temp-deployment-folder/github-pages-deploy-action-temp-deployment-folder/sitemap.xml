@@ -2,16 +2,10 @@
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
-<url>
-<loc>https://agatabialoskorska.github.io/my-portfolio/</loc>
-<lastmod>2023-04-18T10:33:54+00:00</lastmod>
-<priority>1.00</priority>
-</url>
 <url>
 <loc>https://agatabialoskorska.github.io/my-portfolio/index.html</loc>
 <lastmod>2023-04-18T10:33:54+00:00</lastmod>
-<priority>0.80</priority>
+<priority>1.00</priority>
 </url>
 <url>
 <loc>https://agatabialoskorska.github.io/my-portfolio/projects.html</loc>
