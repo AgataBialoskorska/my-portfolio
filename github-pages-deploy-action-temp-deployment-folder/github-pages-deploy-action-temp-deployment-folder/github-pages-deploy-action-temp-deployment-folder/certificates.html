@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="I'm just a regular person and wanna-be JavaScript frontend developer. I like challenges and
-    thinking outside the box. Sometimes I can even be a little too ambitious, but that's only because I
-    really enjoy what I do.">
+    <meta name="description" content="On this page of my portfolio you can find certificates of my skills.">
     <meta name="keywords"
         content="programming, websites, design, github, linkedin, frontend, developer, javascript, js, application">
     <meta name="author" content="Agata Bialoskorska">
@@ -18,42 +16,39 @@
 </head>
 
 <body>
-    <nav class="menu">
-        <ul>
-            <li class="navBtns"><a href="./index.html">about me</a></li>
-            <li class="navBtns"><a href="./projects.html">projects</a></li>
-            <li class="navBtns"><a href="./certificates.html">certificates</a></li>
-        </ul>
-    </nav>
     <div class="content">
+        <nav class="menu">
+            <ul>
+                <li class="navBtns"><a href="./">about me</a></li>
+                <li class="navBtns"><a href="./projects.html">projects</a></li>
+                <li class="navBtns"><a href="./certificates.html">certificates</a></li>
+            </ul>
+        </nav>
         <div id="certificates" class=" site">
             <h1> my certificates</h1>
             <div class='certContent'>
                 <div class="certs">
-                    <a href="https://agatabialoskorska.imgix.net/udemy.jpg">
-                        <img src="https://agatabialoskorska.imgix.net/udemy.jpg" alt="Udemy Certificate"></a>
+                    <img src="https://agatabialoskorska.imgix.net/udemy.jpg" alt="Udemy Certificate">
                 </div>
                 <div class="certs">
-                    <a href="https://agatabialoskorska.imgix.net/microsoft.jpg">
-                        <img src="https://agatabialoskorska.imgix.net/microsoft.jpg" alt="Microsoft Certificate"></a>
+                    <img src="https://agatabialoskorska.imgix.net/microsoft.jpg" alt="Microsoft Certificate">
                 </div>
                 <div class="certs">
-                    <a href="https://agatabialoskorska.imgix.net/suse.PNG">
-                        <img src="https://agatabialoskorska.imgix.net/suse.PNG" alt="SUSE Certificate"></a>
+                    <img src="https://agatabialoskorska.imgix.net/suse.PNG" alt="SUSE Certificate">
                 </div>
                 <div class="certs">
-                    <a href="https://agatabialoskorska.imgix.net/netware.PNG">
-                        <img src="https://agatabialoskorska.imgix.net/netware.PNG" alt="Netware Certificate"></a>
+                    <img src="https://agatabialoskorska.imgix.net/netware.PNG" alt="Netware Certificate">
                 </div>
             </div>
-
+        </div>
+        <div class="cookie-alert">
+            This website uses
+            <a href="https://www.cloudflare.com/learning/privacy/what-are-cookies/"> cookies </a>
+            to enhance the user experience.
+            <button class="cookie-accept-button" onclick="acceptCookies()">Accept</button>
         </div>
     </div>
-    <div class="cookie-alert">
-        This website uses <a href="https://www.cloudflare.com/learning/privacy/what-are-cookies/">cookies</a> to
-        enhance the user experience.
-        <button class="cookie-accept-button" onclick="acceptCookies()">Accept</button>
-    </div>
+    <script src="./certificates.js"></script>
     <script src="./cookies.js"></script>
 </body>
 

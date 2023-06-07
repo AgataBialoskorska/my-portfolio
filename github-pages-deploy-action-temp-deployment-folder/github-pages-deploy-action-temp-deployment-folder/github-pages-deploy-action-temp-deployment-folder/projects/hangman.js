@@ -1,16 +1,17 @@
-const hangman = document.querySelector('.hangman')
 const hangmanImg = document.querySelector('.hangman img')
 const hangmanPass = document.querySelector('.password')
 const hangmanAlph = document.querySelector('.alphabet')
 const result = document.querySelector('.result')
 const resetBtn = document.querySelector('.reset')
+const backBtn = document.querySelector('.backBtn')
+const gitHangmanBtn = document.querySelector('.gitHangmanBtn')
 
 let passArr = [
 	'Practice makes perfect',
 	'East or west home is best',
 	'A friend in need is a friend indeed',
 	'Where there is a will there is a way',
-	'Time heals all wounds'
+	'Time heals all wounds',
 ]
 const pass = passArr[Math.floor(Math.random() * passArr.length)].toUpperCase()
 let passLength = pass.length
@@ -87,7 +88,6 @@ function check(letter) {
 		result.classList.add('won')
 		result.textContent = 'You WON!'
 		resetBtn.classList.remove('hide')
-
 	}
 	//przegrana
 	if (trying >= 9) {
@@ -99,6 +99,12 @@ function check(letter) {
 		resetBtn.classList.remove('hide')
 	}
 }
-resetBtn.addEventListener('click', function() {
-	location.reload();
-  });
+resetBtn.addEventListener('click', function () {
+	location.reload()
+})
+backBtn.addEventListener('click', function () {
+	location.href = '../projects.html'
+})
+gitHangmanBtn.addEventListener('click', function () {
+	window.location.href = 'https://github.com/AgataBialoskorska/myHangman'
+})

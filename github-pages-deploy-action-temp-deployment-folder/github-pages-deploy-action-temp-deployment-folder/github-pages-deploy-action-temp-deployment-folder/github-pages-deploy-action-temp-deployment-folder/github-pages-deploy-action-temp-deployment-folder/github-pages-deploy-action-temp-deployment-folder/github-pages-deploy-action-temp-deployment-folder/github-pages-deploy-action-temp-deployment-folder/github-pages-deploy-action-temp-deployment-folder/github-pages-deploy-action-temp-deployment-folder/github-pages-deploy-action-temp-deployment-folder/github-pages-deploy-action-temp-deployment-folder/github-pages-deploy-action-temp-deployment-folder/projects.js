@@ -1,6 +1,7 @@
 // ------------------------------------------------- WEATHER API
 const API_LINK = 'https://api.openweathermap.org/data/2.5/weather?q='
-const API_KEY = '&appid=19b751d396fc07d413d2f5edd32308d6'
+// const API_KEY = '&appid=19b751d396fc07d413d2f5edd32308d6'
+const API_KEY = 'JmFwcGlkPTE5Yjc1MWQzOTZmYzA3ZDQxM2QyZjVlZGQzMjMwOGQ2'
 const API_UNITS = '&units=metric'
 
 const prepareDOMElements = () => {
@@ -51,7 +52,7 @@ const getWeather = async () => {
 	} = prepareDOMElements()
 	try {
 		const { randomCity, country } = await getRandomCity()
-		const URL = API_LINK + randomCity + API_KEY + API_UNITS
+		const URL = API_LINK + randomCity + atob(API_KEY) + API_UNITS
 		const res = await axios.get(URL)
 		const temp = res.data.main.temp
 		const hum = res.data.main.humidity
