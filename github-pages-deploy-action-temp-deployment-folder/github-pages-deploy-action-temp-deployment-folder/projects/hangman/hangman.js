@@ -16,8 +16,8 @@ let passArr = [
 const pass = passArr[Math.floor(Math.random() * passArr.length)].toUpperCase()
 let passLength = pass.length
 let trying = 0
-let yesSound = new Audio('./hangman/yes.wav')
-let noSound = new Audio('./hangman/no.wav')
+let yesSound = new Audio('/projects/hangman/yes.wav')
+let noSound = new Audio('/projects/hangman/no.wav')
 let passSecret = ''
 let letter
 
@@ -78,7 +78,7 @@ function check(letter) {
 
 		trying++
 		const picture = 'img/s' + trying + '.jpg'
-		hangmanImg.src = `./hangman/${picture}`
+		hangmanImg.src = `${picture}`
 	}
 
 	//wygrana
@@ -103,8 +103,8 @@ resetBtn.addEventListener('click', function () {
 	location.reload()
 })
 backBtn.addEventListener('click', function () {
-	location.href = '../projects.html'
+	location.href = '/projects.html'
 })
 gitHangmanBtn.addEventListener('click', function () {
-	window.location.href = 'https://github.com/AgataBialoskorska/myHangman'
+	window.location.href = 'https://github.com/AgataBialoskorska/my-portfolio/tree/master/projects/hangman'
 })
