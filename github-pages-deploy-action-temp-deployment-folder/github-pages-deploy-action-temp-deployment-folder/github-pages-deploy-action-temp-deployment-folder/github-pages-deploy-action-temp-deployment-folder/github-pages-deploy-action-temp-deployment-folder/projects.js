@@ -4,7 +4,7 @@ const API_KEY = 'JmFwcGlkPTE5Yjc1MWQzOTZmYzA3ZDQxM2QyZjVlZGQzMjMwOGQ2'
 const API_UNITS = '&units=metric'
 
 const prepareDOMElements = () => {
-	const inputBtn = document.querySelector('.btn')
+	const inputBtn = document.querySelector('.wBtn')
 	const cityName = document.querySelector('.cityName')
 	const weatherIcon = document.querySelector('.weatherIcon')
 	const temperature = document.querySelector('.temperature')

@@ -135,7 +135,4 @@ img {
 		grid-column: 1/2;
 		margin: 5px;
 	}
-	.hide {
-		display: none;
-	}
 }
