@@ -12,8 +12,8 @@
         content="programming, websites, design, github, linkedin, frontend, developer, javascript, js, application">
     <meta name="author" content="Agata Bialoskorska">
     <script src="https://kit.fontawesome.com/37a8b7fe0b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./cookies.css">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./style/cookies.css">
+    <link rel="stylesheet" href="./style/about.css">
     <title>Agata Bialoskorska - Portfolio</title>
 </head>
 
@@ -22,20 +22,14 @@
         <nav class="menu">
             <ul>
                 <li class="navBtns"><a href="./">about me</a></li>
-                <li class="navBtns"><a href="./projects.html">projects</a></li>
-                <li class="navBtns"><a href="./certificates.html">certificates</a></li>
+                <li class="navBtns"><a href="./pages/projects.html">projects</a></li>
+                <li class="navBtns"><a href="./pages/certificates.html">certificates</a></li>
             </ul>
         </nav>
-        <div id="aboutMe" class="aboutMe site">
-            <h1 data-id="myName">Agata Białoskórska</h1>
-            <div class="aboutGrid">
-                <img class="myImg" src="./forAbout/agataCV.jpeg" alt="My Photo">
-                <p data-id="pHi">Hi there!</p>
-                <p>I'm just a regular person and wanna-be JavaScript frontend developer. <br>I like challenges and
-                    thinking outside the box. Sometimes I can even be a little too ambitious, but that's only because I
-                    really enjoy what I do.<br>When not programming, I like to relax by walking or swimming (or baking).
-                    <br>I am also interested in cars, as I used to work in petrol industry.
-                </p>
+        <h1 data-id="myName">Agata Białoskórska</h1>
+        <div id="aboutMe" class="aboutMe">
+            <div class="left">
+                <img src="./projects/forAbout/agataCV.jpeg" alt="My Photo">
                 <div class="contact">
                     <a class="mail contactBtns btn" href="mailto:abialoskorska@icloud.com">
                         <i class="fa-regular fa-envelope"></i>
@@ -49,6 +43,34 @@
                     </a>
                 </div>
             </div>
+            <div class="right">
+                <p>Hi there!</p>
+                <p>I come from little, cute village in the west part of Poland. I love
+                    pure nature - old forests, big, clear lakes. Now I'm living in a huge
+                    city, I came here to find my career path. <br />First I've been worked
+                    in a custommer service, merchandising, through accounting office, art
+                    shop, e-commerce. Most of the time I spend in a petrol businnes. It
+                    wasn't dream work but I loved this place because of people with who
+                    I've been almost every day. Finally I managed the petrol station. I
+                    was doing various tasks, resolving many issues (both easy and
+                    difficult) and I was proud from my crew's achievements. But it was
+                    unfortunately the end of my path in that place. I've been thinking a
+                    long time what I should do to improve myself. I had a couple of ideas,
+                    so I decided to make both happen.<br />...
+                </p>
+                <p>
+                    So, now I'm a mummy who learns everything what is curious for me.
+                    <br />First I started learn english from scratch (now it's B2
+                    according to test results), remind German words and grammar (Hier ist
+                    es ein bisschen schwieriger aber ich lerne immer noch ausdauernd.).<br />
+                    I started to read about Frontend and saw how extensive it is. I read
+                    deeper and deeper and created that page in Vue. Actually I still
+                    create, because I still learn new things.<br />Now my kid attends
+                    kindergarten consequently I can look for a job, but now something what
+                    will have a long career way, so that in the future I won't have to
+                    give up a job that I might love.
+                </p>
+            </div>
         </div>
         <div class="cookie-alert">
             This website uses <a href="https://www.cloudflare.com/learning/privacy/what-are-cookies/">cookies</a> to
@@ -56,7 +78,7 @@
             <button class="cookie-accept-button" onclick="acceptCookies()">Accept</button>
         </div>
     </div>
-    <script src="./cookies.js"></script>
+    <script src="./scripts/cookies.js"></script>
 </body>
 
 </html>

@@ -28,7 +28,7 @@ const prepareDOMElements = () => {
 
 const getRandomCity = async () => {
 	try {
-		const res = await axios.get('./forAPI/city.list.json')
+		const res = await axios.get('../projects/forAPI/city.list.json')
 		const cities = res.data
 		const number = Math.floor(Math.random() * cities.length)
 		const randomCity = cities[number].name

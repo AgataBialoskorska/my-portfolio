@@ -1,0 +1,100 @@
+@import './cookies.css';
+:root {
+	--mainBgCr: rgba(0, 0, 0, 0.8);
+	--mainTextCr: rgb(231, 203, 151);
+	--headersCr: rgb(35, 136, 183);
+	--bordersCr: rgba(0, 68, 178, 0.7);
+	--hover: rgb(245, 245, 245);
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: Arial, sans-serif;
+	font-size: 1.5vw;
+	color: var(--mainTextCr);
+	background-image: url(./background/background.jpg);
+	position: absolute;
+	width: 100vw;
+	min-height: 100vh;
+}
+.content {
+	background-color: var(--mainBgCr);
+	position: absolute;
+	width: 100vw;
+	min-height: 100vh;
+}
+/* -----------------------------   Stylowanie nawigacji */
+.menu {
+	width: 100vw;
+	display: flex;
+	position: sticky;
+	font-size: 1.5em;
+	background-color: var(--bordersCr);
+	z-index: 99;
+}
+.menu a:hover {
+	text-shadow: var(--hover);
+}
+.menu ul {
+	width: 100vw;
+	display: flex;
+	list-style: none;
+	place-content: center;
+}
+.menu li {
+	padding: 2vh 2vw;
+	text-transform: uppercase;
+}
+h1 {
+	font-size: 3em;
+	color: var(--headersCr);
+	margin: 3vh;
+	text-align: center;
+}
+.btn,
+button {
+	padding: 8px;
+	text-transform: uppercase;
+	color: var(--mainTextCr);
+	background-color: var(--headersCr);
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+}
+.btn:hover,
+button:hover {
+	text-shadow: var(--hover);
+	box-shadow: none;
+}
+a:link,
+a:active,
+a:visited {
+	text-decoration: none;
+	box-shadow: none;
+	color: var(--mainTextCr);
+}
+a:hover {
+	color: whitesmoke;
+}
+
+@media (min-width: 1200px){
+	body {
+		width: 1200px;
+		font-size: 18px;
+		margin: 0 auto;
+		position: unset;
+
+	}
+	.content {
+		width: 1200px;
+		font-size: 18px;
+		margin: 0 auto;
+		position: unset;
+	}
+	.menu {
+		width: unset;
+	}
+}
