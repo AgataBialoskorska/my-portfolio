@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -10,8 +10,9 @@
         content="programming, websites, design, github, linkedin, frontend, developer, javascript, js, application">
     <meta name="author" content="Agata Bialoskorska">
     <script src="https://kit.fontawesome.com/37a8b7fe0b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./cookies.css">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="../style/cookies.css">
+    <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../style/certificates.css">
     <title>Agata Bialoskorska - Certificates</title>
 </head>
 
@@ -19,37 +20,97 @@
     <div class="content">
         <nav class="menu">
             <ul>
-                <li class="navBtns"><a href="./">about me</a></li>
+                <li class="navBtns"><a href="../">about me</a></li>
                 <li class="navBtns"><a href="./projects.html">projects</a></li>
                 <li class="navBtns"><a href="./certificates.html">certificates</a></li>
             </ul>
         </nav>
-        <div id="certificates" class=" site">
-            <h1> my certificates</h1>
-            <div class='certContent'>
-                <div class="certs">
-                    <img src="https://agatabialoskorska.imgix.net/udemy.jpg" alt="Udemy Certificate">
+        <h1> my certificates</h1>
+        <div id="certificates" class="certificates">
+            <section>
+                <div class="container">
+                    <div class="carousel">
+                        <input type="radio" name="slides" checked="checked" id="slide-1">
+                        <input type="radio" name="slides" id="slide-2">
+                        <input type="radio" name="slides" id="slide-3">
+                        <input type="radio" name="slides" id="slide-4">
+                        <input type="radio" name="slides" id="slide-5">
+                        <ul class="carousel__thumbnails">
+                            <li>
+                                <label for="slide-1"><img src="https://agatabialoskorska.imgix.net/microsoft.jpg"
+                                        alt="Microsoft Certificate"></label>
+                            </li>
+                            <li>
+                                <label for="slide-2"><img src="https://agatabialoskorska.imgix.net/google.png"
+                                        alt="Google Certificate"></label>
+                            </li>
+                            <li>
+                                <label for="slide-3"><img src="https://agatabialoskorska.imgix.net/udemy.jpg"
+                                        alt="Udemy Certificate"></label>
+                            </li>
+                            <li>
+                                <label for="slide-4"><img src="https://agatabialoskorska.imgix.net/suse.PNG"
+                                        alt="SUSE Certificate"></label>
+                            </li>
+                            <li>
+                                <label for="slide-5"><img src="https://agatabialoskorska.imgix.net/netware.PNG"
+                                    alt="Netware Certificate"></label>
+                                </li>
+                            </ul>
+                            <ul class="carousel__slides">
+                                <li class="carousel__slide">
+                                    <figure>
+                                        <div>
+                                            <img src="https://agatabialoskorska.imgix.net/microsoft.jpg"
+                                            alt="Microsoft Certificate">
+                                        </div>
+                                    </figure>
+                                </li>
+                                <li class="carousel__slide">
+                                    <figure>
+                                        <div>
+                                            <img src="https://agatabialoskorska.imgix.net/google.png"
+                                                alt="Google Certificate">
+                                        </div>
+                                    </figure>
+                                </li>
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="https://agatabialoskorska.imgix.net/udemy.jpg"
+                                            alt="Udemy Certificate">
+                                    </div>
+                                </figure>
+                            </li>
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="https://agatabialoskorska.imgix.net/suse.PNG" alt="SUSE Certificate">
+                                    </div>
+                                </figure>
+                            </li>
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="https://agatabialoskorska.imgix.net/netware.PNG"
+                                            alt="Netware Certificate">
+                                    </div>
+                                </figure>
+                            </li>
+                        </ul>
+
+                    </div>
                 </div>
-                <div class="certs">
-                    <img src="https://agatabialoskorska.imgix.net/microsoft.jpg" alt="Microsoft Certificate">
-                </div>
-                <div class="certs">
-                    <img src="https://agatabialoskorska.imgix.net/suse.PNG" alt="SUSE Certificate">
-                </div>
-                <div class="certs">
-                    <img src="https://agatabialoskorska.imgix.net/netware.PNG" alt="Netware Certificate">
-                </div>
+            </section>
+            <div class="cookie-alert">
+                This website uses
+                <a href="https://www.cloudflare.com/learning/privacy/what-are-cookies/"> cookies </a>
+                to enhance the user experience.
+                <button class="cookie-accept-button" onclick="acceptCookies()">Accept</button>
             </div>
         </div>
-        <div class="cookie-alert">
-            This website uses
-            <a href="https://www.cloudflare.com/learning/privacy/what-are-cookies/"> cookies </a>
-            to enhance the user experience.
-            <button class="cookie-accept-button" onclick="acceptCookies()">Accept</button>
-        </div>
-    </div>
-    <script src="./certificates.js"></script>
-    <script src="./cookies.js"></script>
+        <!-- <script src="../scripts/certificates.js"></script> -->
+        <script src="../scripts/cookies.js"></script>
 </body>
 
 </html>
