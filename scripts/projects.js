@@ -28,7 +28,7 @@ const prepareDOMElements = () => {
 
 const getRandomCity = async () => {
 	try {
-		const res = await axios.get('./forAPI/city.list.json')
+		const res = await axios.get('../projects/forAPI/city.list.json')
 		const cities = res.data
 		const number = Math.floor(Math.random() * cities.length)
 		const randomCity = cities[number].name
@@ -83,59 +83,4 @@ prepareDOMElements().inputBtn.addEventListener('click', getWeather)
 getWeather()
 // setInterval(() => {
 // 	getWeather()
-// }, 30000)
-
-// // ------------------------------------------------- DISNEY API
-
-// let numberCharacter
-// let image
-// let pName
-// let pFilms
-// const API_LINK_D = 'https://api.disneyapi.dev/character/'
-
-// const getDOMElements = () => {
-// 	image = document.querySelector('.image')
-// 	pName = document.querySelector('.nameOfDisney')
-// 	pFilms = document.querySelector('.disneyFilms')
-// 	return { image, pName, pFilms }
-// }
-
-// const getRandomNum = () => {
-// 	numberCharacter = Math.floor(Math.random() * (7526 - 6 + 1) + 6)
-// }
-// const getDisney = () => {
-// 	const URL_D = API_LINK_D + numberCharacter
-// 	//console.log(URL_D);
-// 	axios
-// 		.get(URL_D)
-// 		.then(res => {
-// 			//console.log(res.data.data);
-// 			const charImage = res.data.data.imageUrl
-// 			const charName = res.data.data.name
-// 			const charFilms = res.data.data.films.join(', ')
-// 			const charTvShows = res.data.data.tvShows.join(', ')
-// 			let filmsString = charFilms ? `Films: ${charFilms}<br>` : ''
-// 			let tvShowsString = charTvShows ? `TV Shows: ${charTvShows}<br>` : ''
-
-// 			if (!charFilms && !charTvShows) {
-// 				pFilms.classList.add('hide')
-// 			} else {
-// 				pFilms.classList.remove('hide')
-// 			}
-// 			image.setAttribute('src', charImage)
-// 			pName.innerHTML = `Name: ${charName}`
-// 			pFilms.innerHTML = `${filmsString}${tvShowsString}`
-// 		})
-// 		.catch(() => {
-// 			const warningD = 'Sorry, URL not found, already looking for another one.'
-// 			console.log(warningD)
-// 		})
-// }
-// getDOMElements()
-// getRandomNum()
-// getDisney()
-
-// setInterval(() => {
-// 	getRandomNum()
-// 	getDisney()
 // }, 30000)
