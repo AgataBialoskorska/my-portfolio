@@ -87,18 +87,18 @@ const check = letter => {
 
 	//wygrana
 	if (pass === passSecret) {
-		result.classList.remove('hide')
 		hangmanAlph.classList.add('hide')
+		result.classList.remove('hide')
 		result.classList.add('won')
-		result.textContent = 'You WON!'
+		result.textContent = 'Great! Will you play again?'
 		resetBtn.classList.remove('hide')
 	}
 	//przegrana
 	if (trying >= 9) {
-		result.classList.remove('hide')
 		hangmanAlph.classList.add('hide')
+		result.classList.remove('hide')
 		result.classList.add('loose')
-		result.textContent = 'You LOSE!'
+		result.textContent = 'OOPS... Will you play again?'
 		hangmanPass.textContent = pass
 		resetBtn.classList.remove('hide')
 	}

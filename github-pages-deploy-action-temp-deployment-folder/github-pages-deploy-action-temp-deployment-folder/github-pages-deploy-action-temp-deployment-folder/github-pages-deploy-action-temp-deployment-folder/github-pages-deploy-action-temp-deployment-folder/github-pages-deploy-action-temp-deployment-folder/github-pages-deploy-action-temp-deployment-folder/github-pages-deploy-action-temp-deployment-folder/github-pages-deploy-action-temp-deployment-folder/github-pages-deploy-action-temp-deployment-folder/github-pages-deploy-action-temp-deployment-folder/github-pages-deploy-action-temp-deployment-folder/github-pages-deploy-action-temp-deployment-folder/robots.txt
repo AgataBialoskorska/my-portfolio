@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://agatabialoskorska.github.io/my-portfolio
+
+# Sitemaps
+Sitemap: https://agatabialoskorska.github.io/my-portfolio/sitemap.xml

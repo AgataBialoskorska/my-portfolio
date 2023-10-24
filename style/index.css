@@ -1,0 +1,100 @@
+@import './cookies.css';
+:root {
+	--mainBgCr: #1a1a1a;
+	--mainTextCr: #cfcfcf;
+	--headersCr: #5b7200;
+	--bordersCr: #ab9400d0;
+	--hover: 1px 1px 2px black, 0 0 1em gold, 0 0 0.2em gold;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: Arial, sans-serif;
+	font-size: 1.5vw;
+	color: var(--mainTextCr);
+	background-color: var(--mainBgCr);
+	position: absolute;
+	width: 100vw;
+	min-height: 100vh;
+}
+.content {
+	background-color: var(--layerBgCr);
+	position: absolute;
+	width: 100vw;
+	min-height: 100vh;
+}
+/* -----------------------------   Stylowanie nawigacji */
+.menu {
+	width: 100vw;
+	display: flex;
+	position: sticky;
+	font-size: 1.5em;
+	background-color: var(--bordersCr);
+	z-index: 99;
+}
+.menu a:hover {
+	text-shadow: var(--hover);
+}
+.menu ul {
+	width: 100vw;
+	display: flex;
+	list-style: none;
+	place-content: center;
+}
+.menu li {
+	padding: 2vh 2vw;
+	text-transform: uppercase;
+}
+h1 {
+	font-size: 3em;
+	color: var(--headersCr);
+	margin: 3vh;
+	text-align: center;
+}
+.btn,
+button {
+	padding: 8px;
+	text-transform: uppercase;
+	color: var(--mainTextCr);
+	background-color: var(--headersCr);
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+}
+.btn:hover,
+button:hover {
+	text-shadow: var(--hover);
+	box-shadow: none;
+}
+a:link,
+a:active,
+a:visited {
+	text-decoration: none;
+	box-shadow: none;
+	color: var(--mainTextCr);
+}
+a:hover {
+	color: whitesmoke;
+}
+
+@media (min-width: 1200px){
+	body {
+		width: 1200px;
+		font-size: 20px;
+		margin: 0 auto;
+		position: unset;
+
+	}
+	.content {
+		width: 1200px;
+		font-size: 18px;
+		margin: 0 auto;
+		position: unset;
+	}
+	.menu {
+		width: unset;
+	}
+}
