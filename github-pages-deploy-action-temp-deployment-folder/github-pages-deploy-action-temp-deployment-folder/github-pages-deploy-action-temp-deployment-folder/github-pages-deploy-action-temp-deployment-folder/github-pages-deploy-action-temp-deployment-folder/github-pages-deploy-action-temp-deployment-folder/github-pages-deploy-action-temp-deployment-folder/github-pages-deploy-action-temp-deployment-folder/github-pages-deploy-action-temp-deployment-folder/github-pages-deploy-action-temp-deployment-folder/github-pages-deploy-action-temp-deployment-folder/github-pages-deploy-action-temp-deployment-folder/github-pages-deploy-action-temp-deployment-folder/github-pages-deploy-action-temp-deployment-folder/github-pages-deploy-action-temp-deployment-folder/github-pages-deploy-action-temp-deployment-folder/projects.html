@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/37a8b7fe0b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./cookies.css">
     <link rel="stylesheet" href="./index.css">
-    <style></style>
+
     </link>
     <title>Agata Bialoskorska - projects</title>
 </head>
@@ -25,6 +26,12 @@
         <div class="site">
             <h1>my projects </h1>
             <div class='projectsContent'>
+                <div class="hello apis">
+                    <p class="header">Here is "Hello World"<br>in several programming languages</p>
+                    <img class="langIcon" src="./projects/256x256bb.jpg" alt="Programming Icon">
+                    <a class="gameBtn" href="https://github.com/AgataBialoskorska/hello-world"><button >link to GitHub</button></a>
+
+                </div>
                 <div class="weatherApi apis">
                     <p class="header">Here is a random city and its weather</p>
                     <img class="weatherIcon"
@@ -48,24 +55,29 @@
                         <div class="sunset"></div>
                     </div>
                 </div>
-                <div class="disneyApi apis">
-                    <p class="header">Here is a random character <br>from Disney movie.</p>
-                    <img class="image" src="" alt="Photo of Disney Character">
-                    <div class="disneyDes">
-                    <p class="nameOfDisney">Oh, sorry, I have a problem with the picture, I'll fix it soon.</p>
-                    <p class="disneyFilms "></p></div>
-                </div>
                 <div class="hangman apis">
                     <p class="header">Here is a game <br> Hangman</p>
                     <img class="gameImg" src="./projects/hangman/img/s4.jpg" alt="hangman">
                     <a class="gameBtn" href="./projects/hangman.html"><button >Click if you wanna play </button></a>
+                </div>
+                <div class="disneyApi apis">
+                    <p class="header">Here is a random character <br>from Disney movie.</p>
+                    <img class="image" src="" alt="Photo of Disney Character">
+                    <div class="disneyDes">
+                    <p class="nameOfDisney">Oh sorry, data is temporarily unavailable</p>
+                    <p class="disneyFilms "></p></div>
                 </div>
             </div>
         </div>
     </div>
 
     </div>
-
+    <div class="cookie-alert">
+        This website uses <a href="https://www.cloudflare.com/learning/privacy/what-are-cookies/">cookies</a> to enhance the user experience. 
+        <button class="cookie-accept-button" onclick="acceptCookies()">Accept</button>
+      </div>
+    </div>
+    <script src="./cookies.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script src="./projects.js"></script>
 </body>

@@ -81,9 +81,9 @@ const localeSunset = (sun, timeZone) => {
 prepareDOMElements().inputBtn.addEventListener('click', getWeather)
 
 getWeather()
-setInterval(() => {
-	getWeather()
-}, 30000)
+// setInterval(() => {
+// 	getWeather()
+// }, 30000)
 
 // ------------------------------------------------- DISNEY API
 

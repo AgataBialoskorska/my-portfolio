@@ -6,36 +6,40 @@ const resetBtn = document.querySelector('.reset')
 const backBtn = document.querySelector('.backBtn')
 const gitHangmanBtn = document.querySelector('.gitHangmanBtn')
 
-let passArr = [
+const passArr = [
 	'Practice makes perfect',
-	'East or west home is best',
+	'East or west, home is best',
 	'A friend in need is a friend indeed',
-	'Where there is a will there is a way',
+	'Where there is a will, there is a way',
 	'Time heals all wounds',
+	'Better late than never',
+	'Easier said than done',
+	'Speech is silver, silence is golden',
+	'Better an open enemy than a false friend',
+	'Every man has his faults',
 ]
 const pass = passArr[Math.floor(Math.random() * passArr.length)].toUpperCase()
 let passLength = pass.length
 let trying = 0
-let yesSound = new Audio('/projects/hangman/yes.wav')
-let noSound = new Audio('/projects/hangman/no.wav')
+const yesSound = new Audio('/projects/hangman/yes.wav')
+const noSound = new Audio('/projects/hangman/no.wav')
 let passSecret = ''
-let letter
-
 for (let i = 0; i < passLength; i++) {
 	if (pass.charAt(i) == ' ') {
 		passSecret = passSecret + ' '
+	} else if (pass.charAt(i) == ',') {
+		passSecret = passSecret + ','
 	} else {
 		passSecret = passSecret + '-'
 	}
 }
-
 const getPass = () => {
 	hangmanPass.innerHTML = passSecret
 }
 const alphFun = () => {
 	for (let i = 0; i < 26; i++) {
-		let item = String.fromCharCode(65 + i)
-		letter = document.createElement('p')
+		const item = String.fromCharCode(65 + i)
+		const letter = document.createElement('p')
 		letter.classList.add('letter', `no${i}`)
 		letter.textContent = item
 		letter.addEventListener('click', () => check(item, letter))
@@ -45,15 +49,18 @@ const alphFun = () => {
 }
 alphFun()
 
-function pushLetter(str, index, char) {
+const pushLetter = (str, index, char) => {
 	if (index > str.length - 1) return str.toString()
 	else return str.substring(0, index) + char + str.substring(index + 1)
 }
-function check(letter) {
-	let guess
+const check = letter => {
+	if (passSecret.includes(letter)) {
+		return
+	}
+	let guess = false
 
 	for (let i = 0; i < passLength; i++) {
-		if (pass.charAt(i) === letter) {
+		if (pass[i] === letter) {
 			passSecret = pushLetter(passSecret, i, letter)
 			guess = true
 		}
@@ -62,7 +69,6 @@ function check(letter) {
 	const letterElement = document.querySelector(
 		`.letter.no${letter.charCodeAt(0) - 65}`
 	)
-
 	if (letterElement.getAttribute('clicked') === 'true') {
 		return
 	}
@@ -75,10 +81,8 @@ function check(letter) {
 	} else {
 		noSound.play()
 		letterElement.classList.add('notguessed')
-
 		trying++
-		const picture = 'img/s' + trying + '.jpg'
-		hangmanImg.src = `${picture}`
+		hangmanImg.src = `img/s${trying}.jpg`
 	}
 
 	//wygrana
@@ -99,12 +103,12 @@ function check(letter) {
 		resetBtn.classList.remove('hide')
 	}
 }
-resetBtn.addEventListener('click', function () {
-	location.reload()
-})
-backBtn.addEventListener('click', function () {
-	location.href = '/projects.html'
-})
-gitHangmanBtn.addEventListener('click', function () {
-	window.location.href = 'https://github.com/AgataBialoskorska/my-portfolio/tree/master/projects/hangman'
-})
+
+resetBtn.addEventListener('click', () => location.reload())
+backBtn.addEventListener('click', () => history.back())
+gitHangmanBtn.addEventListener(
+	'click',
+	() =>
+		(window.location.href =
+			'https://github.com/AgataBialoskorska/my-portfolio/tree/master/projects/hangman')
+)
