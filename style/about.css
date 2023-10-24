@@ -26,4 +26,5 @@ img {
 }
 .right > * {
 	padding: 0 2vw;
+	line-height: 140%;
 }

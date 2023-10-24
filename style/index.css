@@ -1,10 +1,10 @@
 @import './cookies.css';
 :root {
-	--mainBgCr: rgba(0, 0, 0, 0.8);
-	--mainTextCr: rgb(231, 203, 151);
-	--headersCr: rgb(35, 136, 183);
-	--bordersCr: rgba(0, 68, 178, 0.7);
-	--hover: rgb(245, 245, 245);
+	--mainBgCr: #1a1a1a;
+	--mainTextCr: #cfcfcf;
+	--headersCr: #5b7200;
+	--bordersCr: #ab9400d0;
+	--hover: 1px 1px 2px black, 0 0 1em gold, 0 0 0.2em gold;
 }
 * {
 	margin: 0;
@@ -15,13 +15,13 @@ body {
 	font-family: Arial, sans-serif;
 	font-size: 1.5vw;
 	color: var(--mainTextCr);
-	background-image: url(./background/background.jpg);
+	background-color: var(--mainBgCr);
 	position: absolute;
 	width: 100vw;
 	min-height: 100vh;
 }
 .content {
-	background-color: var(--mainBgCr);
+	background-color: var(--layerBgCr);
 	position: absolute;
 	width: 100vw;
 	min-height: 100vh;
@@ -83,7 +83,7 @@ a:hover {
 @media (min-width: 1200px){
 	body {
 		width: 1200px;
-		font-size: 18px;
+		font-size: 20px;
 		margin: 0 auto;
 		position: unset;
 
