@@ -1,6 +1,5 @@
 // ------------------------------------------------- WEATHER API
 const API_LINK = 'https://api.openweathermap.org/data/2.5/weather?q='
-// const API_KEY = '&appid=19b751d396fc07d413d2f5edd32308d6'
 const API_KEY = 'JmFwcGlkPTE5Yjc1MWQzOTZmYzA3ZDQxM2QyZjVlZGQzMjMwOGQ2'
 const API_UNITS = '&units=metric'
 
