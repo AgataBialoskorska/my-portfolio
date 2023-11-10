@@ -13,7 +13,7 @@
 	box-shadow: inset 1px 1px 3px grey;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+justify-content: flex-end;
 	align-items: center;
 }
 .header {

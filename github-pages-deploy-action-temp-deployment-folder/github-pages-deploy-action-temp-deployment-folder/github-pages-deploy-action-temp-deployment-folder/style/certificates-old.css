@@ -1,0 +1,80 @@
+@import './index.css';
+/* -----------------------------  Stylowanie Certificates */
+.certContent {
+	max-width: 700px;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: space-around;
+	justify-content: space-around;
+	align-items: center;
+}
+.certs {
+	margin: 10px;
+	border: solid 5px var(--bordersCr);
+	border-radius: 5px;
+	padding: 5px;
+}
+.certs:hover {
+	box-shadow: var(--shadow);
+	cursor: pointer;
+}
+.certs img {
+	width: 300px;
+	height: 220px;
+	vertical-align: middle;
+}
+.popup {
+	width: clamp(40vw, 60vw, 80vw);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 100;
+}
+.popup img {
+	width: clamp(40vw, 60vw, 68vw);
+	border: solid 5px var(--bordersCr);
+	border-radius: 5px;
+	padding: 5px;
+}
+.popup p {
+	position: fixed;
+	right: 0;
+	top: 0;
+	transform: translate(-12px, -120%);
+	color: var(--bordersCr);
+}
+.closeBtn,
+.prevBtn,
+.nextBtn {
+	position: fixed;
+	transition: opacity 4s ease-in;
+	background-color: transparent;
+	color: var(--bordersCr);
+	font-size: xx-large;
+}
+.closeBtn:hover,
+.prevBtn:hover,
+.nextBtn:hover {
+	box-shadow: initial;
+	text-shadow: 0 0 15px var(--bordersCr);
+}
+.closeBtn {
+	right: 0;
+	top: 0;
+	transform: translate(80%, -80%);
+}
+.prevBtn {
+	left: 0;
+	transform: translate(-100%, 0);
+	height: 100%;
+	padding-right: 1vw;
+}
+.nextBtn {
+	right: 0;
+	transform: translate(100%, 0);
+	height: 100%;
+	padding-left: 1vw;
+}
