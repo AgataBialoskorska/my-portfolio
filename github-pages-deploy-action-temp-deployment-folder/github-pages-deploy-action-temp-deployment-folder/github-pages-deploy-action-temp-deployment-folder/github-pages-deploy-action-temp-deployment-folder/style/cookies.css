@@ -1,0 +1,31 @@
+.cookie-alert {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: var(--headersCr);
+	color: var(--mainTextCr);
+	padding: 10px;
+	text-align: center;
+	z-index: 999;
+}
+
+.cookie-accept-button {
+	background-color: var(--headersCr);
+	color: var(--mainTextCr);
+	border-radius: 10px;
+	box-shadow: inset 1px 1px 3px 2px grey;
+	padding: 10px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+.cookie-accept-button :hover {
+	background-color: var(--mainTextCr);
+}
+
+a:link,
+a:active,
+a:visited {
+	color: var(--mainTextCr);
+}

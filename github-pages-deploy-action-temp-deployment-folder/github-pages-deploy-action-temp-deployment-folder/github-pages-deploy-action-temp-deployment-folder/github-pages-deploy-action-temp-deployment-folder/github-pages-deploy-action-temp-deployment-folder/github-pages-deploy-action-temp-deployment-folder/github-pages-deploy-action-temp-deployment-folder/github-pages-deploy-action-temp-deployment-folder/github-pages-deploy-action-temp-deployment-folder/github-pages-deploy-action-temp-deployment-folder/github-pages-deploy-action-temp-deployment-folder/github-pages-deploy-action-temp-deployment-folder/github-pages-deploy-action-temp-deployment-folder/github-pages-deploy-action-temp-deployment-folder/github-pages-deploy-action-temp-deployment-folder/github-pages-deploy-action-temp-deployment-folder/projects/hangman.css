@@ -1,106 +1,3 @@
-/* -----------------------------   Zmienne z kolorami */
-:root {
-	--mainBgCr: #212121;
-	--mainTextCr: #cfcfcf;
-	--headersCr: #5b7200;
-	--bordersCr: #ab9400d0;
-	--shadow: 1px 1px 2px black, 0 0 1em gold, 0 0 0.2em gold;
-}
-/* -----------------------------   Resetowanie domyślnych styli */
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-/* -----------------------------   Globalne style */
-body {
-	font-family: Arial, sans-serif;
-	font-size: 16px;
-	line-height: 1.5;
-	color: var(--mainTextCr);
-	background-color: var(--mainBgCr);
-}
-.container {
-	max-width: 100%;
-	margin: 0 auto;
-	padding: 20px;
-	box-sizing: border-box;
-}
-button {
-	max-width: 80%;
-	padding: 10px;
-	font-weight: bold;
-	text-transform: uppercase;
-	color: var(--mainTextCr);
-	background-color: var(--headersCr);
-	border-radius: 5px;
-	border: none;
-	cursor: pointer;
-}
-
-/* -----------------------------   Stylowanie nawigacji */
-.menu {
-	width: clamp(600px, 100%, 100%);
-	display: flex;
-	position: fixed;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	font-size: clamp(14px, 1.5vw, 20px);
-	background-color: var(--bordersCr);
-	flex-wrap: nowrap;
-	padding: 20px;
-}
-.menu ul {
-	width: clamp(600px, 100%, 1200px);
-	display: flex;
-	list-style: none;
-	flex-wrap: nowrap;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-}
-.menu li {
-	margin: 20px;
-}
-
-/* -----------------------------   Stylizowanie linkow */
-.menu a:link,
-.menu a:active,
-.menu a:visited {
-	text-decoration: none;
-	box-shadow: none;
-	color: var(--mainTextCr);
-	padding: 10px;
-	text-transform: uppercase;
-}
-.hangman a:link,
-.hangman a:active,
-.hangman a:visited {
-	text-decoration: none;
-	box-shadow: none;
-	color: var(--mainTextCr);
-}
-.menu a:hover {
-	text-shadow: var(--shadow);
-}
-.btn:hover,
-button:hover {
-	box-shadow: var(--shadow);
-}
-.content {
-	padding: 1px 0;
-}
-h1 {
-	font-size: clamp(18px, 3vw, 40px);
-	color: var(--headersCr);
-	margin-bottom: 10%;
-}
-.site {
-	text-align: center;
-	margin: 12vw auto;
-	max-width: 1000px;
-}
 .hangGrid {
 	min-height: 500px;
 	display: grid;
@@ -125,8 +22,8 @@ h1 {
 img {
 	grid-row: 2/3;
 	grid-column: 1/2;
-  width: clamp(80%, 85%, 95%);
-  border: 2px solid var(--bordersCr);
+	width: clamp(80%, 85%, 95%);
+	border: 2px solid var(--bordersCr);
 }
 .alphabet {
 	grid-row: 2/3;
@@ -192,23 +89,6 @@ img {
 	display: none;
 }
 @media (max-width: 768px) {
-	.menu {
-		width: clamp(200px, 100%, 768px);
-		display: flex;
-	}
-	.menu ul {
-		width: clamp(200px, 100%, 768px);
-		display: flex;
-		list-style: none;
-		flex-wrap: nowrap;
-		flex-direction: column;
-	}
-	.container {
-		max-width: 100%;
-	}
-	.site {
-		margin: 250px auto 10vw;
-	}
 	.hangGrid {
 		display: grid;
 		justify-content: center;

@@ -3,6 +3,6 @@
 My porfolio page, created with plain JS. 
 
 Roadmap:
-
-* add certificates page
+* add tests
 * add more projects & pages
+* add framework
